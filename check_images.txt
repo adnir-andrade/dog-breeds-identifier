@@ -1,0 +1,35 @@
+Can you also check the grammar from this here, Chat?
+
+Questions regarding Uploaded Image Classification:
+
+1. Did the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed? If not, report the differences in the classifications.
+
+Answer: 
+The three architecture models correctly classified the dogs as Huskies. There was a minor problem with my original code that caused "husky"
+to be compared against "eskimo dog, husky" and return a false negative.However, after some refactoring, all models correctly identified the dogs.
+
+2. Did each of the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed of dog as that model architecture classified Dog_02.jpg? If not, report the differences in the classifications.
+
+Answer: 
+  The same result as the first question was observed. There were no differences in the classifications.
+
+3. Did the three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg to not be dogs? If not, report the misclassifications.
+
+Answer: 
+  The animal photo used for this test was a photo of my cat. Both VGG and Alexnet correctly identified the animal in the image as a cat 
+  and even flattered her by labelling her as a Siamese (she looks like one, but she is a stray, but I still think it counts). 
+  However, Resnet misclassified my cat as a hamster, which was pretty amusing but clearly incorrect.
+
+  The object photo used was an image of an hourglass that I found on the internet. All three models correctly identified and labeled it.
+
+4. Based upon your answers for questions 1. - 3. above, select the model architecture that you feel did the best at classifying the four uploaded images. Describe why you selected that model architecture as the best on uploaded image classification.
+
+Answer:
+By far, based on this test alone, Alexnet would be the best choice. Not only it is the faster among the three models, taking only 1 second to execute,
+but it is also as accurate as VGG, which made no mistakes (but took 10 seconds to process everything). On the other hand, while Resnet took only 5 seconds
+to process everything, he misclassified the photo of my cat.
+
+ But even though Alexnet should be the right choice, it didn't perform as well when dealing with the pack of 40 images in this project.
+ Even though it's not the focus of this question, I decided to run the same testes against the standard pack, discovering that, in this scenario, 
+ Resnet was the best middle ground between efficiency and accuracy.
+ But if time is not of essence, VGG should be the right choice for being the most reliable of them all.

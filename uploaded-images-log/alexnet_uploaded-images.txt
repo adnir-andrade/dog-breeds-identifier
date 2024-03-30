@@ -1,0 +1,102 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 5 key-value pairs.
+Below are 5 of them:
+ 1 key:               Hourglass_01.jpg  label:                  hourglass
+ 2 key:                   HuSkY_02.jpg  label:                      husky
+ 3 key:                     Cat_01.jpg  label:                        cat
+ 4 key:                 eskimo_dog.jpg  label:                 eskimo dog
+ 5 key:                   Husky_01.jpg  label:                      husky
+
+     MATCH:
+
+              Hourglass_01.jpg: 
+Real:                  hourglass   Classifier:                      hourglass
+
+                  HuSkY_02.jpg: 
+Real:                      husky   Classifier:              eskimo dog, husky
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:      siamese cat, siamese, cat
+
+                eskimo_dog.jpg: 
+Real:                 eskimo dog   Classifier:              eskimo dog, husky
+
+                  Husky_01.jpg: 
+Real:                      husky   Classifier:              eskimo dog, husky
+
+ NOT A MATCH:
+
+# Total Images 5 # Matches: 5 # NOT Matches: 0
+
+     MATCH:
+
+              Hourglass_01.jpg: 
+Real:                  hourglass   Classifier:                      hourglass  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                  HuSkY_02.jpg: 
+Real:                      husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:      siamese cat, siamese, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                eskimo_dog.jpg: 
+Real:                 eskimo dog   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                  Husky_01.jpg: 
+Real:                      husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+# Total Images 5 # Matches: 5 # NOT Matches: 0
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  5  N Dog Images:  3  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  5  N Dog Images:  3  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+_____________________________
+
+**
+
+MODEL USED:
+ alexnet 
+
+STATS:
+
+Number of Images:
+ 5
+Number of Dog Images:
+ 3
+Number of "Not-a" Dog Images:
+ 2
+Correct Dogs:
+100.00%
+Correct Breeds:
+100.00%
+Correct "Not-a" Dogs:
+100.00%
+Matches:
+100.00%
+
+MISCLASSIFIED DOGS:
+There was no misclassification.
+
+MISCLASSIFIED BREEDS:
+There was no misclassification.
+**
+
+_____________________________
+
+
+** Total Elapsed Runtime: 0:0:0
